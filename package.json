@@ -1,0 +1,34 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -g uglifyify src/index.js -o public/bundle.min.js",
+    "build:watch": "nodemon --watch src --exec 'npm run build'",
+    "dev": "npm run server & npm run build:watch",
+    "server": "http-server public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barryels/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barryels/weather-app/issues"
+  },
+  "homepage": "https://github.com/barryels/weather-app#readme",
+  "devDependencies": {
+    "browserify": "^16.5.1",
+    "http-server": "^0.12.3",
+    "nodemon": "^2.0.4",
+    "uglifyify": "^5.0.2"
+  },
+  "dependencies": {
+    "j2c": "^0.11.3",
+    "mithril": "^2.0.4"
+  }
+}
